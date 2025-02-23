@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+    <style>
+        .cat {
+          height: 200px;
+          width: 200px;
+          margin-top: 50px;
+          margin-bottom: 0px;
+        }
+        body {
+            text-align: center;
+            font-family: "Fleur De Leah", serif;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: vh;
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+            
+        }
+        .container {
+            max-width: 600px;
+            max-height: 600px;
+            margin: 0 auto;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            position: absolute;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(222, 49, 99);
+            display: flex;
+            margin-left: 220px;
+            
+
+        }
+        #no {
+            transition: 0.2s;
+            position: absolute;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <img src=".//cat.jpg" class="cat">
+        <h2>Do you want to go on a date with me?</h2>
+        <button onclick="alert('I knew you would say yes! :3')">Yes</button>
+        <button id="no" onmouseover="runAway()">No</button>
+    </div>
+    
+    <script>
+        function runAway() {
+            let button = document.getElementById("no");
+            let windowWidth = window.innerWidth - button.offsetWidth;
+            let windowHeight = window.innerHeight - button.offsetHeight;
+            
+            let newPosX = Math.random() * windowWidth;
+            let newPosY = Math.random() * windowHeight;
+            
+            button.style.left = newPosX + "px";
+            button.style.top = newPosY + "px";
+        }
+    </script>
+</body>
+</html>
